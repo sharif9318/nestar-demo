@@ -2,14 +2,14 @@ import { Stack } from "@mui/material";
 import Head from "next/head";
 import Top from "../Top";
 import Footer from "../Footer";
-import HeaderFilter from "../homepage/headerFilter";
+import HeaderFilter from "../homepage/HeaderFilter";
 
 const withLayoutMain = (Component: any) => {
   return (props: any) => {
     return (
       <>
         <Head>
-          <title>Mestar</title>
+          <title>NESTAR-DEMO</title>
         </Head>
         <Stack id="pc-wrap">
           <Stack id="top">
