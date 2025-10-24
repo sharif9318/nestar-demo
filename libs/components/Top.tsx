@@ -3,11 +3,33 @@ import { Box, Stack } from "@mui/material";
 import Link from "next/link";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
+import { useState, useEffect } from "react";
 
 const Top = () => {
+  const [isTransparent, setIsTransparent] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Add transparent class when scrolled past 100px
+      if (window.scrollY > 100) {
+        setIsTransparent(false);
+      } else {
+        setIsTransparent(true);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Stack className="navbar">
-      <Stack className="navbar-main">
+      <Stack className={`navbar-main ${isTransparent ? "" : "transparent"}`}>
         <Stack className="container">
           <Box component="div" className="logo-box">
             <Link href="/">
@@ -52,4 +74,5 @@ const Top = () => {
     </Stack>
   );
 };
+
 export default Top;

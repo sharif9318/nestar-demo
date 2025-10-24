@@ -1,5 +1,7 @@
 @import "/scss/variables.scss";
 @import "/scss/pc/homepage/homepage.scss";
+@import "/scss/pc/property/property.scss";
+@import "/scss/pc/property/detail.scss";
 
 #pc-wrap {
   #top {
@@ -14,14 +16,15 @@
         box-sizing: border-box;
         z-index: 99;
         align-items: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        border-top: 1px solid rgba(63, 53, 53, 0.07);
         &.transparent {
-          background-color: #181a209e;
+          background-color: rgba(43, 46, 54, 0.62);
         }
         .container {
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
+
           .logo-box {
             img {
               width: 150px;
@@ -36,7 +39,7 @@
             justify-content: space-between;
             div {
               position: relative;
-              color: #eeeeeeed;
+              color: #ffffff;
               font-family: $font;
               font-size: 15px;
               font-style: normal;
