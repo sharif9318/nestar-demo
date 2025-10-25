@@ -3,12 +3,12 @@ import Head from "next/head";
 import Top from "../Top";
 import Footer from "../Footer";
 
-const withLayoutMain = (Component: any) => {
+const withLayoutBasic = (Component: any) => {
   return (props: any) => {
     return (
       <>
         <Head>
-          <title>Nestar</title>
+          <title>Nestar-Demo</title>
         </Head>
         <Stack id="pc-wrap">
           <Stack id="top">
@@ -42,4 +42,4 @@ const withLayoutMain = (Component: any) => {
   };
 };
 
-export default withLayoutMain;
+export default withLayoutBasic;
